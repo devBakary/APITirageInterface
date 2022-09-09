@@ -12,27 +12,20 @@
   height: 270px;
   background-color: #ececec;
   border-radius: 8% 8% 0 0;
+  padding: 10px;
 }
 
 .part1{
-  padding-top: 5px;
-  margin-left: 5%;
+
+  margin-left: 2%;
   font-weight: bolder;
   font-size: 20px;
 }
 .part2{
-  margin-left: 18%;
+  padding-top: 15px;
+  margin-left: 6%;
   font-weight: bolder;
   font-size: 20px;
-}
-
-
-.stat2{
-  margin-left: 2%;
-  width: 40%;
-  height: 270px;
-  background-color: #ececec;
-  border-radius: 8% 8% 0 0;
 }
 
 .cercle{
@@ -40,28 +33,115 @@
 }
 /* premier stat*/
 .cercle1{
-  margin-left: 5%;
-  width: 170px;
-  height: 170px;
-  background-color: red;
+  margin-left: 6%;
+  margin-top: 5%;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
-}
-.cer{
-  margin-left: 12%;
-  margin-top: 12%;
-  width: 130px;
-  height: 130px;
-  background-color: #ececec;
-  border-radius: 100%;
+  border: 20px solid red;
 }
 
+.cercle2{
+  margin-left: 27%;
+  margin-top: 5%;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 20px solid red;
+}
 
 /* deuxieme stat*/
-.cercle2{
-  margin-left: 22%;
-  width: 170px;
-  height: 170px;
-  background-color: red;
-  border-radius: 100%;
+.stat2{
+  margin-left: 2%;
+  width: 40%;
+  height: 270px;
+  background-color: #ececec;
+  border-radius: 10% 10% 0 0;
+  padding: 10px;
 }
+/* deuxieme contenaire pour les libelles*/
+/* cercle pour le talk et le evenement*/
+.cercl1{
+  margin-left: 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 15px solid red;
+}
+
+/* cercle pour le formation*/
+.cercl2{
+  margin-left: 30%;
+  margin-top: 2%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 15px solid red;
+}
+/* cercle pour le evenement*/
+.cercl3{
+  margin-left: 6%;
+  margin-top: 2%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 15px solid red;
+}
+
+/* bouton talk*/
+.partie1{
+  margin-left: 5%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* bouton formation*/
+.partie2{
+  padding-top: 15px;
+  margin-left: 17%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* bouton evenement*/
+.partie3{
+  margin-left: 3%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* les details du bouton*/
+ .detail a{
+  text-decoration: none;
+  border: 1px solid #ffab09;
+  background-color: #ffab09;
+  color: black;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.tirage{
+  border: 1px solid #ffab09;
+  background-color: #ffab09;
+  width: 250px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 10%;
+  margin-top: 10%;
+}
+.tirage a{
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+
+
 

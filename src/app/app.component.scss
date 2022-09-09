@@ -3,7 +3,7 @@
 }
 /* le corps de la page*/
 .main{
-  width: 70%;
+  width: 75%;
 }
 
 /* les styles pour le menu de navigation */
@@ -12,7 +12,7 @@ img{
   width: 180px;
 }
 .dashboard{
-  height: 900px;
+  height: auto;
   width: 20%;
   background-color: #4A5E77;
   border-radius: 0 15% 0 0;
@@ -34,6 +34,7 @@ li{
   text-align: center;
   margin-top: 50px;
   padding: 2px;
+
 }
 ul{
   margin-left: -12%;
@@ -41,6 +42,13 @@ ul{
 }
 a:active{
   background-color: black;
+}
+
+.footer{
+  border: 1px solid #d9d9d9;
+  background-color: #d9d9d9;
+  height: 60px;
+  width: auto;
 }
 
 
