@@ -1,3 +1,11 @@
+.container{
+  display: flex;
+}
+/* le corps de la page*/
+.main{
+  width: 70%;
+}
+
 /* les styles pour le menu de navigation */
 img{
   height: 110px;
@@ -34,3 +42,5 @@ ul{
 a:active{
   background-color: black;
 }
+
+
