@@ -1,0 +1,54 @@
+.forme{
+  width: 40%;
+  height: 300px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+label{
+  margin-left: 5%;
+  font-weight: bold;
+}
+.libelle {
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+  margin-left: 40%;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+.libelle:active{
+  border: 1.5px solid red;
+}
+.liste{
+  width: 300px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 42%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+.nbre{
+  width: 120px;
+  height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+  margin-left: 98%;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+.btn{
+  width: 180px;
+  height: 40px;
+  background-color: #4A5E77;
+  color: white;
+  padding: 10px;
+  margin-left: 43%;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+}
