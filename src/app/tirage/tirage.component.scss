@@ -1,7 +1,13 @@
+.main{
+  display: flex;
+}
+.part1{
+  width: 70%;
+}
 .forme{
-  width: 55%;
+  width: 78%;
   height: 300px;
-  border: 1px solid black;
+  border: 1.5px solid black;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -15,7 +21,7 @@ label{
   width: 300px;
   height: 30px;
   font-size: 18px;
-  margin-left: 40%;
+  margin-left: 37%;
   border-radius: 10px;
   background-color: #eaeaea;
 }
@@ -27,7 +33,7 @@ label{
   height: 35px;
   font-size: 18px;
   font-weight: bold;
-  margin-left: 42%;
+  margin-left: 39%;
   border-radius: 10px;
   background-color: #d9d9d9;
 }
@@ -37,7 +43,7 @@ label{
   font-size: 22px;
   font-weight: bold;
   text-align: right;
-  margin-left: 98%;
+  margin-left: 95%;
   border-radius: 10px;
   background-color: #eaeaea;
 }
@@ -48,6 +54,33 @@ label{
   color: white;
   padding: 10px;
   margin-left: 43%;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.part2{
+  margin-top: 2%;
+}
+.fil{
+  margin-left: 10%;
+  margin-right: auto;
+}
+.file{
+  width: 250px;
+  height: 30px;
+  margin-left: 10%;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+.bttn{
+  width: 180px;
+  height: 40px;
+  background-color: #4A5E77;
+  color: white;
+  padding: 10px;
+  margin-left: 20%;
   margin-right: auto;
   font-size: 20px;
   text-align: center;
