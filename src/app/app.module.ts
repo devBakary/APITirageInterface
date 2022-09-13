@@ -7,6 +7,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

@@ -30,8 +30,8 @@
 
     <div class="stat2">
       <span class="part1">nombre total de listes tirées</span><br>
-      <span class="partie1"> Talk <b class="detail"> <a href="tirageL">Details</a></b></span>
-      <span class="partie2"> Formation <b class="detail"> <a href="tirageL">Details</a></b></span>
+      <span class="partie1" *ngFor="let index of liste"> {{index.libele}} <b class="detail"> <a [routerLink]="['/tirageL', index.idliste]">Details</a></b></span>
+
 
       <section class="cercle">
 
@@ -39,9 +39,6 @@
 
         </div>
 
-        <div class="cercl2">
-
-        </div>
 
       </section>
 

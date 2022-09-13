@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ListeService } from '../liste.service';
 
 @Component({
   selector: 'app-detail-liste',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailListeComponent implements OnInit {
 
-  constructor() { }
+  tirages$!: Observable<any>;
+
+  constructor(private service: ListeService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    const idliste = +this.route.snapshot.params["idliste"];
+    this.tirages$ = this.service.getTirageByIdListe(idliste);
   }
 
 }

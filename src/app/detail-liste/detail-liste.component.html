@@ -3,29 +3,36 @@
 
   <div class="main">
     <h1>Details Liste</h1>
-    <table>
-      <tr>
-        <th>Date</th>
-        <th>Tirage</th>
-        <th>Libelle</th>
-        <th>Nombre_De_Personne</th>
+    <table >
+        <thead>
+          <th>Date</th>
+          <!--<th>Tirage</th>-->
+          <th>Libelle</th>
+          <th>Nombre_De_Personne</th>
 
-      </tr>
+        </thead>
 
-      <tr>
-        <td>2022/02/02</td>
-         <td>
-          <select name="liste" style="border-radius: 30px; padding: 10px;">
-            <option value="nom">--Choisissez--</option>
-            <option value="nom">Tirage1</option>
-            <option value="nom">Tirage2</option>
-          </select>
-         </td>
-        <td>talk</td>
-        <td>25</td>
+        <tbody *ngIf=" tirages$ | async as index">
 
+        <tr *ngFor="let tirage of tirages$ | async; index as i">
+          <td>{{tirage.date}}</td>
+          <td>{{tirage.libelle}}</td>
+          <td>25</td>
 
-      </tr>
+          <!--
+
+                <td>
+            <select name="liste" style="border-radius: 30px; padding: 10px;">
+              <option value="nom">--Choisissez--</option>
+              <option value="nom">Tirage1</option>
+              <option value="nom">Tirage2</option>
+            </select>
+           </td>
+
+          -->
+        </tr>
+
+      </tbody>
 
     </table>
 
