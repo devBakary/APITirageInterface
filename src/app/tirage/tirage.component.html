@@ -4,25 +4,23 @@
 
   <div class="part1">
     <h2 style="margin-left: 40%;">Creer un nouveau tirage  ci-dessous</h2>
-    <form action="">
+    <form name="form" #f="ngForm" >
       <div class="forme">
         <table>
           <tr>
             <td><label for="libelle">Libelle</label></td>
-            <td ><input class="libelle" type="text" name="libelle"  placeholder="Veuillez entre le libelle du tirage!" required></td>
+            <td ><input class="libelle" type="text" name="libelle"  placeholder="Veuillez entre le libelle du tirage!" ></td>
           </tr>
           <tr>
             <td><label for="liste">Liste</label></td>
-            <td><select class="liste" name="liste" >
-              <option value="">--Choisissez une liste--</option>
-              <option value="talk">talk</option>
-              <option value="evenement">Evenement</option>
-              <option value="formation">Formation</option>
+            <td><select class="liste">
+              <option value="">--Choisissez la liste--</option>
+              <option *ngFor="let liste of listes" [ngValue]="liste" name="libele" >{{liste.libele}}</option>
             </select></td>
           </tr>
           <tr>
             <td><label for="nombre">Nombre à tiré</label></td>
-            <td><input  class="nbre" type="text" name="nbre" placeholder="0" required></td>
+            <td><input  class="nbre" type="text" name="nbre" placeholder="0" [maxLength]="3" required  ></td>
           </tr>
         </table>
     </div><br><br>
@@ -30,14 +28,17 @@
           <input class="btn" type="submit" value="Tirer" name="tirer"><br><br>
     </form>
   </div>
-  <div class="part2">
+
+  <div class="part2" >
     <h2 style="margin-left: 0%;">Importer un fichier excel ici</h2>
 
     <img class="fil" src="assets/images/file.png" alt="">
-    <form action="">
-      <input type="file" name="fichier"><br><br>
-      <input class="file" type="text" name="libelle" placeholder="Donner le libelle de la liste"><br><br>
-      <input class="bttn" type="submit" value="Enregistrer">
+
+    <form name="form" [formGroup]="formmodule" (ngSubmit)="importerliste()">
+      <input type="file" name="file" formControlName="file"  (change)="fileChange($event)" ><br><br>
+      <input class="file" type="text" placeholder="Donner le libelle de la liste" name="libele" formControlName="libele"><br><br>
+
+      <button class="bttn" type="submit">Enregistrer</button>
     </form>
 
   </div>

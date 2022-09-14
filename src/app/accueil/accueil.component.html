@@ -18,6 +18,7 @@
       <section class="cercle">
 
         <div class="cercle1">
+          <h2>{{listes.length}}</h2>
         </div>
 
         <div class="cercle2">
@@ -64,7 +65,11 @@
     <a href="tirageT">Faire Tirage</a>
   </div>
 
-
+  <ul *ngFor="let liste of listes">
+    <li >{{liste.idliste}}</li>
+    <li >{{liste.date}}</li>
+    <li >{{liste.libele}}</li>
+  </ul>
 
   <h2>NOUS CONTACTER</h2>
   <hr>

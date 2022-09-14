@@ -4,7 +4,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
-import { ListesComponent } from "./listes/listes.component";
+import { ListesComponent } from './listes/listes.component';
 
 const routes: Routes = [
   {

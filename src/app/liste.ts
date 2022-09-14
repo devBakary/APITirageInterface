@@ -1,7 +1,8 @@
 export class Liste {
 
-  idliste: number= 0;
-  date?: Date;
-  libele?: string;
+  public idliste: number= 0;
+  public date?: Date;
+  public libele!: string;
+  public file!: File;
 
 }
