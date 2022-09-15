@@ -4,43 +4,65 @@
   <div class="main">
     <h1>Details Liste</h1>
     <table >
+      <thead>
+
+        <th>Libelle</th>
+        <th>Date</th>
+        <th>Nombre_De_Personne</th>
+        <th>Nombre_De_Tirage</th>
+
+      </thead>
+      <!--//async permet de parcourir un observable -->
+
+      <tbody >
+
+      <tr>
+        <!-- <td>{{tirages$[0].idliste.libele}}</td> -->
+        <td>{{liste1.libele}}</td>
+        <td>{{liste1.date}}</td>
+        <td>{{nbPostulant}}</td>
+        <td>{{nbTirage}}</td>
+
+        <!--//on ecris exactement l'id qui est dans la table dont on veut afficher le contenu ici c'est tirage -->
+      </tr>
+ </tbody>
+ </table><br>
+
+    <table >
         <thead>
+          <th>Numéro</th>
           <th>Date</th>
-          <!--<th>Tirage</th>-->
           <th>Libelle</th>
           <th>Nombre_De_Personne</th>
+          <th>Action</th>
 
         </thead>
+        <!--//async permet de parcourir un observable -->
 
-        <tbody *ngIf=" tirages$ | async as index">
+        <tbody >
 
         <tr *ngFor="let tirage of tirages$ | async; index as i">
+          <td>{{i+1}}</td>
           <td>{{tirage.date}}</td>
           <td>{{tirage.libelle}}</td>
           <td>25</td>
 
-          <!--
+          <!--//on ecris exactement l'id qui est dans la table dont on veut afficher le contenu ici c'est tirage -->
 
-                <td>
-            <select name="liste" style="border-radius: 30px; padding: 10px;">
-              <option value="nom">--Choisissez--</option>
-              <option value="nom">Tirage1</option>
-              <option value="nom">Tirage2</option>
-            </select>
-           </td>
+          <td> <a [routerLink] ="['/tirageD', tirage.id]" style="color: black ;">Detail</a>  </td>
 
-          -->
+
         </tr>
 
       </tbody>
 
     </table>
 
-    <button>
-      <a href="tirageD">Detail_Tirage</a>
+    <!--button>
+      <a >Detail_Tirage</a>
       <i class="fa-solid fa-angles-right"></i>
 
-    </button>
+    </button-->
 
 
  </div>

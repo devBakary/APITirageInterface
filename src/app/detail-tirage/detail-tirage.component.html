@@ -1,51 +1,48 @@
 <section class="container">
 
   <div class="main">
-    <h1>Details tirage</h1>
+    <h1>Details Tirage</h1>
+
+
     <table>
-      <tr>
-        <th>Date</th>
-        <th>Liste-Tirée</th>
-        <th>Nom</th>
-        <th>Prénom</th>
-        <th>Email</th>
+      <tr >
+
+        <th>Libelle</th>
+        <th>date</th>
+        <th>Nombre Tiré</th>
+        <th>Liste tirer</th>
       </tr>
 
       <tr>
-        <td>2022/02/02</td>
-        <td>Talk</td>
-        <td>Kanoute</td>
-        <td>Rokia</td>
-        <td>rose@gmail.com</td>
+        <td>{{tirage.libelle}}}</td>
+        <td>{{tirage.date}}</td>
+        <td></td>
+        <td></td>
+       
       </tr>
-      <tr>
-        <td>2022/02/02</td>
-        <td>Talk</td>
-        <td>Kanoute</td>
-        <td>Rokia</td>
-        <td>rose@gmail.com</td>
+
+    </table><br>
+
+
+    <!--Verifie que l'observable contient quelquechose-->
+
+    <table *ngIf=" postulantListe$ | async as index">
+      <tr >
+        <th>n°</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Numéro</th>
+        <th>Email</th>
       </tr>
-      <tr>
-        <td>2022/02/02</td>
-        <td>Talk</td>
-        <td>Kanoute</td>
-        <td>Rokia</td>
-        <td>rose@gmail.com</td>
+
+      <tr *ngFor="let t of postulantListe$ |async; index as g">
+        <td>{{g+1}}</td>
+        <td>{{t.nompostulant}}</td>
+        <td>{{t.prenompostulant}}</td>
+        <td>{{t.numeropostulant}}</td>
+        <td>{{t.email}}</td>
       </tr>
-      <tr>
-        <td>2022/02/02</td>
-        <td>Talk</td>
-        <td>Kanoute</td>
-        <td>Rokia</td>
-        <td>rose@gmail.com</td>
-      </tr>
-      <tr>
-        <td>2022/02/02</td>
-        <td>Talk</td>
-        <td>Kanoute</td>
-        <td>Rokia</td>
-        <td>rose@gmail.com</td>
-      </tr>
+
     </table>
 
     <button>

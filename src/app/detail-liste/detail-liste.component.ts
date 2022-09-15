@@ -11,6 +11,9 @@ import { ListeService } from '../liste.service';
 export class DetailListeComponent implements OnInit {
 
   tirages$!: Observable<any>;
+  liste1 : any
+  nbPostulant: any
+  nbTirage : any
 
   constructor(private service: ListeService,
     private route: ActivatedRoute
@@ -19,6 +22,22 @@ export class DetailListeComponent implements OnInit {
   ngOnInit(): void {
     const idliste = +this.route.snapshot.params["idliste"];
     this.tirages$ = this.service.getTirageByIdListe(idliste);
+
+    this.service.getUneListe(idliste).subscribe((data) =>{
+      this.liste1 = data;
+
+    });
+this.service.getNbPersonne(idliste).subscribe(data =>{
+  this.nbPostulant = data;
+})
+
+this.service.getTirageSurUneListe(idliste).subscribe(data =>{
+  this.nbTirage = data;
+})
+
+
+
+
   }
 
 }

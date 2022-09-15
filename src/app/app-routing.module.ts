@@ -14,7 +14,7 @@ const routes: Routes = [
 },
 {path: "tirageA", component: AccueilComponent},
 {path:"tirageT", component:TirageComponent},
-{path:"tirageD", component: DetailTirageComponent},
+{path:"tirageD/:idtirage", component: DetailTirageComponent},
 {path:"tirageL/:idliste", component: DetailListeComponent}
 
 ];
