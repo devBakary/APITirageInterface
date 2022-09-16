@@ -11,8 +11,10 @@
   width: 90%;
   height: 270px;
   background-color: #ececec;
-  border-radius: 8% 8% 0 0;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
   padding: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 
 /*libelle pour le premeier statistique*/

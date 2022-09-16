@@ -10,7 +10,7 @@ import { PostulantTrierComponent } from './postulant-trier/postulant-trier.compo
 const routes: Routes = [
   {
   path: "",
-  redirectTo:"/postulantT",
+  redirectTo:"/tirageA",
   pathMatch: 'full'
 },
 {path: "tirageA", component: AccueilComponent},
