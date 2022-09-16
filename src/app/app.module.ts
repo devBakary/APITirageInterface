@@ -7,9 +7,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
+import { ListesComponent } from "./listes/listes.component";
 import { HttpClientModule } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +17,15 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AccueilComponent,
     TirageComponent,
     DetailListeComponent,
-    DetailTirageComponent
+    DetailTirageComponent,
+    ListesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule,
-    Ng2SearchPipeModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

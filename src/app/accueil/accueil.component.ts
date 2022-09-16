@@ -24,5 +24,8 @@ export class AccueilComponent implements OnInit {
       this.liste = data;
 
     })
+    this.service.getListe().subscribe(data=>{
+       this.listes=data;
+    });
 }
 }
