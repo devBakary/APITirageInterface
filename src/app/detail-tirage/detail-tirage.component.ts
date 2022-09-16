@@ -11,9 +11,12 @@ import { ListeService } from "../liste.service";
 })
 export class DetailTirageComponent implements OnInit {
 
-  postulantListe$!: Observable<any>
+  postulantListe$!: any
 
   tirage: any;
+  nbTrier: any;
+  pages: any;
+  serachText:any;
 
   constructor(private listeService: ListeService,
     private route: ActivatedRoute) { }
@@ -31,6 +34,9 @@ this.listeService.getUnTirage(idtirage).subscribe((data)=>{
 })
 
 
+this.listeService.getNbPostulantTrier(idtirage).subscribe(data =>{
+  this.nbTrier = data;
+})
   }
 
 }

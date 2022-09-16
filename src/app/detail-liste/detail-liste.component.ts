@@ -10,10 +10,11 @@ import { ListeService } from '../liste.service';
 })
 export class DetailListeComponent implements OnInit {
 
-  tirages$!: Observable<any>;
+  tirages$!: any;
   liste1 : any
   nbPostulant: any
   nbTirage : any
+  pages: number=1;
 
   constructor(private service: ListeService,
     private route: ActivatedRoute
@@ -34,6 +35,9 @@ this.service.getNbPersonne(idliste).subscribe(data =>{
 this.service.getTirageSurUneListe(idliste).subscribe(data =>{
   this.nbTirage = data;
 })
+
+
+
 
 
 

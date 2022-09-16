@@ -2,7 +2,7 @@
 
   <div class="main">
     <h1>Details Tirage</h1>
-
+<input type="search" />
 
     <table>
       <tr >
@@ -14,11 +14,11 @@
       </tr>
 
       <tr>
-        <td>{{tirage.libelle}}}</td>
+        <td>{{tirage.libelle}}</td>
         <td>{{tirage.date}}</td>
+        <td>{{nbTrier}}</td>
         <td></td>
-        <td></td>
-       
+
       </tr>
 
     </table><br>
@@ -35,7 +35,7 @@
         <th>Email</th>
       </tr>
 
-      <tr *ngFor="let t of postulantListe$ |async; index as g">
+      <tr *ngFor="let t of postulantListe$ |filter:serachText | paginate: {itemsPerPage: 1,currentPage: pages} |async; index as g">
         <td>{{g+1}}</td>
         <td>{{t.nompostulant}}</td>
         <td>{{t.prenompostulant}}</td>
@@ -45,14 +45,15 @@
 
     </table>
 
+
     <button>
-      <a href="#">Suivant</a>
+      <a href="#">Retour</a>
       <i class="fa-solid fa-angles-right"></i>
 
     </button>
 
 
  </div>
-
+ <pagination-controls (pageChange)="pages = $event"></pagination-controls>
 
 </section>

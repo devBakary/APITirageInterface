@@ -45,7 +45,12 @@ export class ListeService {
 return this.http.get<any>(`http://localhost:8080/postulant/${idliste}`);
   }
 
+  //Affiche le nombre de tirage sur une liste
   getTirageSurUneListe(idliste: number):Observable<any>{
     return this.http.get<any>(`http://localhost:8080/tirage/nbr/${idliste}`);
+  }
+
+  getNbPostulantTrier(idtirage: number):Observable<any>{
+    return this.http.get<any>(`http://localhost:8080/postulantTrie/nbrTrier/${idtirage}`);
   }
 }
