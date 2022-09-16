@@ -12,7 +12,7 @@ import { ListeService } from '../liste.service';
 })
 export class AccueilComponent implements OnInit {
   liste : any;
-
+  listes: any;
   constructor(private listeService: ListeService) { }
 
   ngOnInit(){
@@ -24,7 +24,7 @@ export class AccueilComponent implements OnInit {
       this.liste = data;
 
     })
-    this.service.getListe().subscribe(data=>{
+    this.listeService.getListe().subscribe(data=>{
        this.listes=data;
     });
 }

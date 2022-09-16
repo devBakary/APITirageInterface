@@ -35,7 +35,8 @@
         <th>Email</th>
       </tr>
 
-      <tr *ngFor="let t of postulantListe$ |filter:serachText | paginate: {itemsPerPage: 1,currentPage: pages} |async; index as g">
+      <!-- <tr *ngFor="let t of postulantListe$ |filter:serachText | paginate: {itemsPerPage: 1,currentPage: pages} |async; index as g"></tr> -->
+   <tr *ngFor="let t of postulantListe$ |async; index as g">
         <td>{{g+1}}</td>
         <td>{{t.nompostulant}}</td>
         <td>{{t.prenompostulant}}</td>
@@ -54,6 +55,6 @@
 
 
  </div>
- <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+ <!-- <pagination-controls (pageChange)="pages = $event"></pagination-controls> -->
 
 </section>

@@ -40,7 +40,7 @@ export class TirageComponent implements OnInit {
   }
   importerliste(){
     this.liste= this.formmodule.value
-    this.service.addList(this.liste.libele, this.file).subscribe(
+    this.service.importer(this.liste.libele, this.file).subscribe(
       data =>{
         this.formmodule.reset()
       }

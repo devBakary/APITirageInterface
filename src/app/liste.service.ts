@@ -13,6 +13,12 @@ export class ListeService {
 
   constructor(private http: HttpClient) { }
 
+  importer(libele: string, file: any): Observable<any>{
+    let data = new FormData();
+    data.append("file", file)
+    return this.http.post<void>(`hhttp://localhost:8080/postulant/importe/${libele}`, data)
+  }
+
   //Afficher toute les liste
   getListe():Observable<any>{
     return this.http.get<object>("http://localhost:8080/liste/afficher");//this.API_URL+this.ENDPOINT_Liste
@@ -53,4 +59,6 @@ return this.http.get<any>(`http://localhost:8080/postulant/${idliste}`);
   getNbPostulantTrier(idtirage: number):Observable<any>{
     return this.http.get<any>(`http://localhost:8080/postulantTrie/nbrTrier/${idtirage}`);
   }
+
+  
 }
