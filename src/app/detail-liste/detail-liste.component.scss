@@ -1,8 +1,7 @@
-.container{
+.main{
   /* DETAILTIRAGE */
-  margin-left: 240px;
+  margin-left: 0px;
   width: 100%;
-  height: 760px;
   background-image: url(../../assets/images/detailTirage.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -19,8 +18,8 @@ h1{
 table{
   border: 3px solid #4A5E77;
   border-collapse: collapse;
-  margin-left: 150px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color:  rgba(255, 255, 255, 0.59);
 
 

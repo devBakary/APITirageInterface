@@ -2,6 +2,70 @@
 
 
   <div class="main">
+    <h1>Details Liste</h1>
+    <table >
+      <thead>
+
+        <th>Libelle</th>
+        <th>Date</th>
+        <th>Nombre_De_Personne</th>
+        <th>Nombre_De_Tirage</th>
+
+      </thead>
+      <!--//async permet de parcourir un observable -->
+
+      <tbody >
+
+      <tr>
+        <!-- <td>{{tirages$[0].idliste.libele}}</td> -->
+        <td>{{liste1.libele}}</td>
+        <td>{{liste1.date}}</td>
+        <td>{{nbPostulant}}</td>
+        <td>{{nbTirage}}</td>
+
+        <!--//on ecris exactement l'id qui est dans la table dont on veut afficher le contenu ici c'est tirage -->
+      </tr>
+ </tbody>
+ </table><br>
+
+    <table >
+        <thead>
+          <th>Numéro</th>
+          <th>Date</th>
+          <th>Libelle</th>
+
+          <th>Action</th>
+
+        </thead>
+        <!--//async permet de parcourir un observable -->
+
+        <tbody >
+
+        <tr *ngFor="let tirage of tirages$ | async;  paginate: { itemsPerPage: 2, currentPage: pages};  index as i; let id=index">
+
+          <td>{{i+1}}</td>
+          <td>{{tirage.date}}</td>
+          <td>{{tirage.libelle}}</td>
+
+
+          <!--//on ecris exactement l'id qui est dans la table dont on veut afficher le contenu ici c'est tirage -->
+
+          <td> <a [routerLink] ="['/tirageD', tirage.id]" style="color: black ;">Detail</a>  </td>
+
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+
+    <!--button>
+      <a >Detail_Tirage</a>
+      <i class="fa-solid fa-angles-right"></i>
+
+    </button-->
 
 
  </div>
