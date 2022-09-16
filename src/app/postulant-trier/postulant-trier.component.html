@@ -1,0 +1,16 @@
+<p>postulant-trier works!</p>
+
+<table class="table">
+
+  <th>Id Liste</th>
+  <th>Date</th>
+  <th>Libelle</th>
+  <th>Details</th>
+
+  <tr *ngFor="let list of listes">
+    <td>{{list.idpostulant}}</td>
+    <td>{{list.nompostulant}}</td>
+    <td>{{list.email}}</td>
+  </tr>
+
+</table>

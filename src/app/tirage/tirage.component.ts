@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Liste } from '../liste';
 import { ListeService } from '../liste.service';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Tirage } from '../tirage';
 
 @Component({
   selector: 'app-tirage',
@@ -12,37 +13,68 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 export class TirageComponent implements OnInit {
 
 
-  /*form ={
-    libelle:null,
-    nbre: null,
-    libele: null
-  }
 
-  forme = {
-    libelle: null
-  }*/
+  //dec pour importer
   formmodule!: FormGroup;
-  file: any
-  liste!: Liste;
 
+  //dec pour faire le tirage
+  formmodules!: FormGroup;
+
+  file: any;
+  liste!: Liste;
+  tirage!: any;
+
+
+  id:number=0;
+  libelle:string='';
+  libele:string=''
+  date!:Date;
+  nbre:number=0;
+
+  //pour afficher la liste
   listes: any
   constructor( private service: ListeService, private http: HttpClient, private formB: FormBuilder ) { }
+
+  tiraObj:Tirage={
+    id: 0,
+    date: new Date(),
+    libelle: '',
+    nbre: 0
+  }
 
   ngOnInit(): void {
 
     this.formmodule= this.formB.group({
-      libele:['', Validators.required],
+      libele: ['', Validators.required],
       file:['', Validators.required]
     })
+   
   }
   fileChange(e:any){
-    this.file = e.target["file"][0]
+    this.file = e.target["files"][0]
   }
   importerliste(){
     this.liste= this.formmodule.value
-    this.service.addList(this.liste.libele, this.file).subscribe(
+    this.service.importer(this.liste.libele, this.file).subscribe(
       data =>{
         this.formmodule.reset()
+      }
+    )
+  }
+
+  resetForm(){
+    this.libele='',
+    this.libelle='',
+    this.nbre=0
+  }
+
+
+  faireTirage(){
+    // this.tirage= this.formmodules.value
+    this.tiraObj.libelle=this.libelle;
+    this.service.tirage(this.tiraObj, this.libele, this.nbre ).subscribe(
+      data=>{
+        this.resetForm()
       }
     )
   }

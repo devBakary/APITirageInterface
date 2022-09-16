@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListeService } from "../liste.service";
+import { PostulantTrierService } from '../postulant-trier.service';
 
 
 @Component({
@@ -10,12 +11,17 @@ import { ListeService } from "../liste.service";
 export class AccueilComponent implements OnInit {
 
   listes: any
-  constructor(private service: ListeService) { }
+  postulistes: any
+  constructor(private service: ListeService, private services: PostulantTrierService) { }
 
   ngOnInit(): void {
     this.service.getListe().subscribe(data=>{
        this.listes=data;
     });
+
+    this.services.postulantTrier().subscribe(data=>{
+      this.postulistes = data;
+    })
   }
 
 }

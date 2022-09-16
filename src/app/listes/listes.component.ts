@@ -8,6 +8,8 @@ import { ListeService } from "../liste.service";
 })
 export class ListesComponent implements OnInit {
 
+  file!: any;
+
 
   listes: any
   constructor(private service: ListeService) { }
@@ -16,6 +18,7 @@ export class ListesComponent implements OnInit {
     this.service.getListe().subscribe(data=>{
        this.listes=data;
     });
+
   }
 
 }

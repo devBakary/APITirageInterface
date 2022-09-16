@@ -1,6 +1,7 @@
 export class Tirage {
 
-  id: number = 0;
-  date?: Date;
-  libelle?: string;
+ public id: number = 0;
+ public date!: Date;
+ public libelle!: string;
+ public nbre!: number;
 }

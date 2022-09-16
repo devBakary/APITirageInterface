@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Tirage } from './tirage';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,9 @@ import { Observable } from 'rxjs';
 export class ListeService {
 
   constructor( private http: HttpClient ) { }
+
   //methode pour l'importation
-  addList(libele: string, file: any): Observable<any>{
+  importer(libele: string, file: any): Observable<any>{
    let data= new FormData();
     data.append("file", file)
     return this.http.post<void>(`http://localhost:8080/postulant/importe/${libele}`, data)
@@ -20,6 +22,12 @@ export class ListeService {
     //acces a httpclient
     //importation de httpclient dans app.module.ts
     return this.http.get(`http://localhost:8080/liste/lire`)
+  }
+
+  //pour faire le tirage
+  tirage(tirage:Tirage, libele: string, nbre: number ):Observable<any>{
+    // let data = new Tirage();
+    return this.http.post<any>(`http://localhost:8080/tirage/createTirage/${libele}/${nbre}`, tirage)
   }
 
 
