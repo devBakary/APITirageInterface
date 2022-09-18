@@ -1,0 +1,19 @@
+
+<div class="tb">
+  <table class="table">
+
+    <th>Id Liste</th>
+    <th>Date</th>
+    <th>Libelle</th>
+    <th>Details</th>
+
+    <tr *ngFor="let liste of listes">
+      <td>{{liste.idliste}}</td>
+      <td>{{liste.date}}</td>
+      <td>{{liste.libele}}</td>
+      <td  style="text-align: right;"><a href="tirageL"><i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+    </tr>
+
+  </table>
+
+</div>

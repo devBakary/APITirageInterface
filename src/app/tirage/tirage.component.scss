@@ -3,15 +3,47 @@
 }
 .part1{
   width: 70%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.entete{
+  width: 78%;
+  height: 70px;
+  border: 2px solid black;
+  background-color: #4A5E77;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.libe{
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+.imge{
+      height: 50px;
+      background-size: cover;
+      position: absolute;
+      left: 58%;
+      top: 11%;
 }
 .forme{
   width: 78%;
   height: 300px;
-  border: 1.5px solid black;
+  border: 2px solid black;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
+  box-sizing: border-box;
+  background-color: #ececec;
+  box-sizing: border-box;
+  padding: 10px;
+  border-top: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 label{
   margin-left: 5%;
@@ -21,22 +53,21 @@ label{
   width: 300px;
   height: 30px;
   font-size: 18px;
+  border: none;
+  border-bottom: 1px solid black;
   margin-left: 37%;
   border-radius: 10px;
   background-color: #eaeaea;
 }
-.libelle:active{
-  border: 1.5px solid red;
+::placeholder{
+  color: black;
+  padding-left: 10px;
 }
-.liste{
-  width: 300px;
-  height: 35px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 39%;
-  border-radius: 10px;
-  background-color: #d9d9d9;
+.libelle:hover{
+  border-bottom: 3px solid #0D9F45;
+
 }
+
 .nbre{
   width: 120px;
   height: 30px;
@@ -57,10 +88,24 @@ label{
   margin-right: auto;
   font-size: 20px;
   text-align: center;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+.btn:hover{
+  background-color: #0D9F45 ;
 }
 
 .part2{
   margin-top: 2%;
+}
+.formm{
+    border: 1px solid black;
+    width: 320px;
+    height: 430px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 .fil{
   margin-left: 10%;
@@ -85,3 +130,7 @@ label{
   font-size: 20px;
   text-align: center;
 }
+.bttn:hover{
+  background-color: #0D9F45 ;
+}
+

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ListeService } from "../liste.service";
+import { PostulantTrierService } from '../postulant-trier.service';
+
 
 @Component({
   selector: 'app-accueil',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilComponent implements OnInit {
 
-  constructor() { }
+  listes: any
+  postulistes: any
+  constructor(private service: ListeService, private services: PostulantTrierService) { }
 
   ngOnInit(): void {
+    this.service.getListe().subscribe(data=>{
+       this.listes=data;
+    });
+
+    this.services.postulantTrier().subscribe(data=>{
+      this.postulistes = data;
+    })
   }
 
 }

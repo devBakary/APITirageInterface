@@ -7,6 +7,10 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
+import { ListesComponent } from "./listes/listes.component";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostulantTrierComponent } from './postulant-trier/postulant-trier.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,16 @@ import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
     AccueilComponent,
     TirageComponent,
     DetailListeComponent,
-    DetailTirageComponent
+    DetailTirageComponent,
+    ListesComponent,
+    PostulantTrierComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
