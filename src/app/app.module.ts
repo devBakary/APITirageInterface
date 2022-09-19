@@ -10,6 +10,7 @@ import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { ListesComponent } from "./listes/listes.component";
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostulantTrierComponent } from './postulant-trier/postulant-trier.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TirageComponent,
     DetailListeComponent,
     DetailTirageComponent,
-    ListesComponent
+    ListesComponent,
+    PostulantTrierComponent,
   ],
   imports: [
     BrowserModule,

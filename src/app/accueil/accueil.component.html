@@ -2,8 +2,6 @@
 
 <div class="main">
 
-
-
   <h2>NOS STATISTIQUES</h2>
   <hr>
   <section class="stat">
@@ -11,62 +9,36 @@
     <div class="stat1">
 
 
-      <span class="part1">nombre total de listes tirées</span>
-      <span class="part2">Nombre total de tirage</span>
+      <span class="part1">Total Postulant Tiré</span>
+      <span class="part2">Le Total de tirage</span>
+      <span class="part3">Le Total de listes</span>
 
 
       <section class="cercle">
 
         <div class="cercle1">
-          <h2>{{listes.length}}</h2>
+          <p class="statistic">{{postulistes.length}}</p>
         </div>
 
         <div class="cercle2">
+          <p class="statistic2">{{listes.length}}</p>
+        </div>
+
+        <div class="cercle3">
+          <p class="statistic3">{{listes.length}}</p>
         </div>
 
       </section>
 
     </div>
 
-
-    <div class="stat2">
-      <span class="part1">nombre total de listes tirées</span><br>
-      <span class="partie1" *ngFor="let index of liste"> {{index.libele}} <b class="detail"> <a [routerLink]="['/tirageL', index.idliste]">Details</a></b></span>
-
-
-      <section class="cercle">
-
-        <div class="cercl1">
-
-        </div>
-
-
-      </section>
-
-      <span class="partie3"> Evenement <b class="detail"> <a href="tirageL">Details</a></b></span>
-
-      <section class="cercle">
-
-        <div class="cercl3">
-
-        </div>
-
-      </section>
-
-
-    </div>
-
-  </section>
+  </section><br><br>
+  <app-listes></app-listes><br><br>
 
   <div class="tirage">
     <a href="tirageT">Faire Tirage</a>
   </div>
 
-  <ul *ngFor="let liste of listes">
-    <li >{{liste.idliste}}</li>
-    <li >{{liste.date}}</li>
-    <li >{{liste.libele}}</li>
-  </ul>
 
   <h2>NOUS CONTACTER</h2>
   <hr>
@@ -95,6 +67,7 @@
           <td><img src="assets/images/address.png" alt=""></td>
           <td>ACI 2000, Bamako</td>
         </tr>
+
       </table>
 
 
