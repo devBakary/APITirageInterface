@@ -2,7 +2,16 @@
   <div class="main">
 
   <div class="part1">
-    <h2 style="margin-left: 40%;">Creer un nouveau tirage  ci-dessous</h2>
+    <div class="entete">
+      <table>
+        <tr>
+          <td><p class="libe">Faire un nouveau Tirage</p></td>
+          <img class="imge" src="assets/images/detailTirage.jpg" alt="">
+        </tr>
+      </table>
+      
+      
+    </div>
     <form name="form">
       <div class="forme">
         <table>
@@ -27,33 +36,8 @@
   </div>
 
 
-<!--
-  <div class="part1">
-    <h2 style="margin-left: 40%;">Creer un nouveau tirage  ci-dessous</h2>
-    <form name="form" [formGroup]="formmodules" (ngSubmit)="faireTirage()">
-      <div class="forme">
-        <table>
-          <tr>
-            <td><label for="libelle">Libelle</label></td>
-            <td ><input class="libelle" type="text" name="libelle"  placeholder="Veuillez entre le libelle du tirage!" formControlName="libelle"  ></td>
-          </tr>
-          <tr>
-            <td><label for="liste">Liste</label></td>
-            <td><input class="libelle" type="text" placeholder="Donner le libelle de la liste du tirage" name="libele" formControlName="libele">
-             </td>
-          </tr>
-          <tr>
-            <td><label for="nombre">Nombre à tiré</label></td>
-            <td><input  class="nbre" type="number" name="nbre" placeholder="0" minlength="1" maxlength="3" required formControlName="nbre"  ></td>
-          </tr>
-        </table>
-    </div><br><br>
-          <button class="btn" type="submit">Tirer</button>
-
-    </form>
-  </div> -->
-
   <div class="part2" >
+    <div class="formm">
     <h2 style="margin-left: 0%;">Importer un fichier excel ici</h2>
 
     <img class="fil" src="assets/images/file.png" alt="">
@@ -68,7 +52,7 @@
     </form>
 
   </div>
-
+</div>
 </div>
 </section>
 

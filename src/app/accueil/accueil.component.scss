@@ -143,6 +143,209 @@
   padding: 5px;
 }
 
+@media(max-width: 600px){
+
+  .cercle{
+    display: block;
+  }
+
+  .stat1{
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .cercle1, .cercle2, .cercle3{
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 12px solid green;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .part1{
+    position: absolute;
+    top: 13%;
+    right: 17%;
+  }
+  /*libelle pour le deuxieme statistique*/
+  .part2{
+    position: absolute;
+    top: 43%;
+    right: 19%;
+  }
+  
+  /*libelle pour le troisieme statistique*/
+  .part3{
+    position: absolute;
+    top: 74%;
+    right: 21%;
+  }
+  
+}
+
+@media(min-width: 600px) and (max-width: 740px){
+
+  .cercle{
+    display: flex;
+  }
+
+  .stat1{
+    width: 90%;
+    height: 435px;
+    padding: 15px;
+  }
+
+  .cercle1, .cercle2{
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 12px solid green;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+
+.cercle3{
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 12px solid green;
+    margin-right: auto;
+    position: absolute;
+    top: 45%;
+    left: 36%;
+}
+  .part1{
+    position: absolute;
+    top: 13%;
+    right: 38%;
+  }
+  /*libelle pour le deuxieme statistique*/
+  .part2{
+    position: absolute;
+    top: 11%;
+    right: 8%;
+  }
+  
+  /*libelle pour le troisieme statistique*/
+  .part3{
+    position: absolute;
+    top: 43%;
+    right: 40%;
+  }
+  
+}
+
+@media(min-width: 740px) and (max-width: 920px){
+
+  .cercle{
+    display: flex;
+  }
+
+  .stat1{
+    width: 90%;
+    height: 435px;
+    padding: 15px;
+  }
+
+  .cercle1, .cercle2{
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 12px solid green;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+
+.cercle3{
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 12px solid green;
+    margin-right: auto;
+    position: absolute;
+    top: 45%;
+    left: 36%;
+}
+  .part1{
+    position: absolute;
+    top: 14%;
+    right: 41%;
+  }
+  /*libelle pour le deuxieme statistique*/
+  .part2{
+    position: absolute;
+    top: 12%;
+    right: 11%;
+  }
+  
+  /*libelle pour le troisieme statistique*/
+  .part3{
+    position: absolute;
+    top: 45%;
+    right: 44%;
+  }
+  
+}
+
+@media(min-width: 920px) and (max-width: 1164px){
+
+  .stat1{
+    margin-left: 7%;
+    width: 90%;
+    height: 270px;
+    background-color: #ececec;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  /*libelle pour le premeier statistique*/
+  .part1{
+    font-weight: bold;
+    font-size: 22px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+  }
+  /*libelle pour le deuxieme statistique*/
+  .part2{
+    position: absolute;
+    right: 10%;
+    top: 17%;
+  }
+  
+  /*libelle pour le troisieme statistique*/
+  .part3{
+    position: absolute;
+    right: 11%;
+    top: 13%;
+  }
+  
+  .cercle{
+    display: flex;
+  }
+  /* premier stat*/
+  .cercle1{
+    margin-left: 3%;
+    margin-top: 5%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    text-align: center;
+    border: 12px solid green;
+  }
+
+}
+
+
+
 
 
 

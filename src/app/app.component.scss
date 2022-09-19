@@ -12,12 +12,15 @@
 img{
   height: 110px;
   width: 180px;
+  margin-left: 30px;
 }
+
 .dashboard{
   width: 15%;
   background-color: #4A5E77;
   border-radius: 20px 20px 0 0;
 }
+
 .bouton li a{
   text-decoration: none;
   display: block;
@@ -29,6 +32,7 @@ li{
   list-style: none;
   text-align: center;
   margin-top: 50px;
+  margin-left: -40px;
 
 }
 li a:hover{
@@ -51,3 +55,180 @@ li a:focus{
   font-weight: bold;
   text-align: center;
  }
+
+ @media(max-width: 425px){
+
+  .dashboard{
+    width: 20%;
+  }
+  img{
+    height: 60px;
+    width: 110px;
+    margin-left: -10px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -34px;
+   margin-right: auto;
+    font-size: 14px;
+  }
+  .bouton li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+ }
+ @media(min-width: 425px) and (max-width: 528px){
+
+  .dashboard{
+    width: 25%;
+  }
+  img{
+    height: 70px;
+    width: 115px;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -30px;
+   margin-right: auto;
+    font-size: 20px;
+  }
+  .bouton li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+ }
+ @media(min-width: 528px) and (max-width: 700px){
+
+  .dashboard{
+    width: 25%;
+  }
+  img{
+    height: 90px;
+    width: 140px;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -40px;
+   margin-right: auto;
+    font-size: 20px;
+  }
+  .bouton li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+ }
+
+ @media(min-width: 700px) and (max-width: 780px){
+
+  .dashboard{
+    width: 25%;
+  }
+  img{
+    height: 120px;
+    width: 170px;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -40px;
+   margin-right: auto;
+    font-size: 28px;
+  }
+  .bouton li a{
+    font-size: 28px;
+    font-weight: bold;
+  }
+ }
+ @media(min-width: 780px) and (max-width: 885px){
+
+  .dashboard{
+    width: 25%;
+  }
+  img{
+    height: 120px;
+    width: 170px;
+    margin-left: 13px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -40px;
+   margin-right: auto;
+    font-size: 28px;
+  }
+  .bouton li a{
+    font-size: 28px;
+    font-weight: bold;
+  }
+ }
+ @media(min-width: 780px) and (max-width: 885px){
+
+  .dashboard{
+    width: 25%;
+  }
+  img{
+    height: 120px;
+    width: 170px;
+    margin-left: 13px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -40px;
+   margin-right: auto;
+    font-size: 28px;
+  }
+  .bouton li a{
+    font-size: 28px;
+    font-weight: bold;
+  }
+ }
+
+ @media(min-width: 885px) and (max-width: 978px){
+
+  .dashboard{
+    width: 20%;
+  }
+  img{
+    height: 120px;
+    width: 170px;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -40px;
+   margin-right: auto;
+    font-size: 28px;
+  }
+  .bouton li a{
+    font-size: 28px;
+    font-weight: bold;
+  }
+ }
+
+ @media(min-width: 978px) and (max-width: 1155px){
+
+  .dashboard{
+    width: 15%;
+  }
+  img{
+    height: 120px;
+    width: 170px;
+    margin-left: -5px;
+    margin-right: auto;
+  }
+  li{
+   margin-left: -60px;
+   margin-right: auto;
+    font-size: 28px;
+  }
+  .bouton li a{
+    font-size: 28px;
+    font-weight: bold;
+  }
+ }
+
+
+
+
