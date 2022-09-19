@@ -13,18 +13,19 @@ import { PostulantTrierService } from '../postulant-trier.service';
 export class AccueilComponent implements OnInit {
   liste : any;
   listes: any;
-  constructor(private listeService: ListeService) { }
+  postulistes: any;
+  constructor(private service: ListeService, private services: PostulantTrierService) { }
 
   ngOnInit(){
 
     console.log('on init........')
 
-    this.listeService.getListe().subscribe((data) =>{
+    this.service.getListe().subscribe((data) =>{
 
       this.liste = data;
 
     })
-    this.listeService.getListe().subscribe(data=>{
+    this.service.getListe().subscribe(data=>{
        this.listes=data;
     });
 

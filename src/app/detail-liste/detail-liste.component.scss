@@ -4,7 +4,7 @@
   width: 100%;
   background-image: url(../../assets/images/detailTirage.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
 
 
@@ -14,15 +14,21 @@ h1{
   font-size:40px;
   font-weight: bold;
   margin-left: 400Px;
+
+  text-shadow:3px 3px 3px green ;
 }
 table{
   border: 3px solid #4A5E77;
   border-collapse: collapse;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 150px;
+
   background-color:  rgba(255, 255, 255, 0.59);
 
 
+}
+
+.table2{
+  margin-left: 250px;
 }
 
 td, th{
