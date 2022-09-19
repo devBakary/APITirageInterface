@@ -21,7 +21,7 @@ export class ListeService {
   getListe(): Observable<any>{
     //acces a httpclient
     //importation de httpclient dans app.module.ts
-    return this.http.get(`http://localhost:8080/liste/lire`)
+    return this.http.get(`http://localhost:8080/liste/afficher`)
   }
 
   //pour faire le tirage
