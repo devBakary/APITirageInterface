@@ -9,7 +9,7 @@ import { ListeService } from "../liste.service";
 export class ListesComponent implements OnInit {
 
   file!: any;
-
+  P: number = 1
 
   listes: any
   constructor(private service: ListeService) { }

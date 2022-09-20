@@ -48,7 +48,7 @@ export class TirageComponent implements OnInit {
       libele: ['', Validators.required],
       file:['', Validators.required]
     })
-   
+
   }
   fileChange(e:any){
     this.file = e.target["files"][0]

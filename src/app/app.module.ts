@@ -9,8 +9,10 @@ import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { ListesComponent } from "./listes/listes.component";
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
 import { PostulantTrierComponent } from './postulant-trier/postulant-trier.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { PostulantTrierComponent } from './postulant-trier/postulant-trier.compo
     DetailTirageComponent,
     ListesComponent,
     PostulantTrierComponent,
+    NgxPaginationModule
   ],
   imports: [
     BrowserModule,
