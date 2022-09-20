@@ -11,6 +11,8 @@ import { ListeService } from "../liste.service";
 })
 export class ListesComponent implements OnInit {
 
+  p: number = 1
+
   idliste:any;
   file!: any;
   listes: any;

@@ -7,7 +7,7 @@
     <th>Libelle</th>
     <th>Details</th>
 
-    <tr *ngFor="let liste of listes">
+    <tr *ngFor="let liste of listes | paginate: { itemsPerPage: 5, currentPage: p}">
 
       <td>{{liste.idliste}}</td>
       <td>{{liste.date}}</td>
@@ -16,5 +16,8 @@
     </tr>
 
   </table>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
 
 </div>

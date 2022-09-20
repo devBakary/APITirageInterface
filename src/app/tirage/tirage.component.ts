@@ -42,13 +42,18 @@ export class TirageComponent implements OnInit {
     nbre: 0
   }
 
+
   ngOnInit(): void {
 
     this.formmodule= this.formB.group({
       libele: ['', Validators.required],
       file:['', Validators.required]
     })
-   
+
+  }
+  resetForme(){
+    this.libele='',
+    this.file=''
   }
   fileChange(e:any){
     this.file = e.target["files"][0]
@@ -57,7 +62,7 @@ export class TirageComponent implements OnInit {
     this.liste= this.formmodule.value
     this.service.importer(this.liste.libele, this.file).subscribe(
       data =>{
-        this.formmodule.reset()
+        this.formmodule.reset();
       }
     )
   }
