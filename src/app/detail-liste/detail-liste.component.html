@@ -41,16 +41,16 @@
 
         <tbody >
 
-        <tr *ngFor="let tirage of tirages$ | async;  paginate: { itemsPerPage: 2, currentPage: pages};  index as i; let id=index">
+        <tr *ngFor="let tirage of tirages$ paginate: { itemsPerPage: 2, currentPage: pages};  let id=index">
 
-          <td>{{i+1}}</td>
+          <td>{{id+1}}</td>
           <td>{{tirage.date}}</td>
           <td>{{tirage.libelle}}</td>
 
 
           <!--//on ecris exactement l'id qui est dans la table dont on veut afficher le contenu ici c'est tirage -->
 
-          <td> <a [routerLink] ="['/tirageD', tirage.id]" style="color: black ;">Detail</a>  </td>
+          <td> <a [routerLink] ="['/tirageD', id]" style="color: black ;">Detail</a>  </td>
 
 
         </tr>

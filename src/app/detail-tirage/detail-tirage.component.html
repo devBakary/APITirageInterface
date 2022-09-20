@@ -26,7 +26,7 @@
 
     <!--Verifie que l'observable contient quelquechose-->
 
-    <table *ngIf=" postulantListe$ | async as index">
+    <table>
       <tr >
         <th>n°</th>
         <th>Nom</th>
@@ -36,8 +36,10 @@
       </tr>
 
       <!-- <tr *ngFor="let t of postulantListe$ |filter:serachText | paginate: {itemsPerPage: 1,currentPage: pages} |async; index as g"></tr> -->
-   <tr *ngFor="let t of postulantListe$ |async; index as g">
-        <td>{{g+1}}</td>
+   <tr *ngFor="let t of postulantListe$ let id=index">
+    <!--|async; index as g -->
+
+        <td>{{id+1}}</td>
         <td>{{t.nompostulant}}</td>
         <td>{{t.prenompostulant}}</td>
         <td>{{t.numeropostulant}}</td>

@@ -20,7 +20,7 @@ import { PostulantTrierComponent } from './postulant-trier/postulant-trier.compo
     DetailListeComponent,
     DetailTirageComponent,
     ListesComponent,
-    PostulantTrierComponent,
+    PostulantTrierComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ import { PostulantTrierComponent } from './postulant-trier/postulant-trier.compo
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 
 })
 export class AppModule { }

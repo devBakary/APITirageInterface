@@ -21,13 +21,25 @@ export class DetailListeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    const idliste = +this.route.snapshot.params["idliste"];
-    this.tirages$ = this.service.getTirageByIdListe(idliste);
 
-    this.service.getUneListe(idliste).subscribe((data) =>{
+    const idliste = +this.route.snapshot.params["idliste"];
+
+
+
+    this.service.getTirageByIdListe(idliste)
+    .subscribe((data)=>{
+      this.tirages$ = data
+      console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"+data)
+    })
+
+
+    this.service.getUneListe(idliste)
+
+    .subscribe((data) =>{
       this.liste1 = data;
 
     });
+
 this.service.getNbPersonne(idliste).subscribe(data =>{
   this.nbPostulant = data;
 })

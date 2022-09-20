@@ -21,15 +21,17 @@ export class ListeService {
     return this.http.post<void>(`hhttp://localhost:8080/postulant/importe/${libele}`, data)
   }
 
+
   //Afficher toute les liste
   getListe():Observable<any>{
-    return this.http.get<object>("http://localhost:8080/liste/afficher");//this.API_URL+this.ENDPOINT_Liste
+    return this.http.get("http://localhost:8080/liste/afficher");//this.API_URL+this.ENDPOINT_Liste
   }
+
 
   //Afficher tout les tirage d'une liste
 
-  getTirageByIdListe(idliste: number):Observable<object>{
-    return this.http.get<object>(`http://localhost:8080/tirage/tt/${idliste}`);
+  getTirageByIdListe(idliste: number):Observable<any>{
+    return this.http.get(`http://localhost:8080/tirage/tt/${idliste}`);
   }
 
   //Afficher les postulant tirer
