@@ -12,8 +12,6 @@ import { Tirage } from '../tirage';
 })
 export class TirageComponent implements OnInit {
 
-
-
   //dec pour importer
   formmodule!: FormGroup;
 
@@ -41,6 +39,7 @@ export class TirageComponent implements OnInit {
     libelle: '',
     nbre: 0
   }
+
 
 
   ngOnInit(): void {

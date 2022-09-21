@@ -18,7 +18,7 @@ export class ListeService {
   importer(libele: string, file: any): Observable<any>{
    let data= new FormData();
     data.append("file", file)
-    return this.http.post<void>(`hhttp://localhost:8080/postulant/importe/${libele}`, data)
+    return this.http.post<void>(`http://localhost:8080/postulant/importe/${libele}`, data)
   }
 
 
