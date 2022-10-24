@@ -20,17 +20,17 @@ export class AccueilComponent implements OnInit {
 
     console.log('on init........')
 
-   /* this.service.getListe().subscribe((data) =>{
+    // this.service.getListe().subscribe((data) =>{
 
-      this.liste = data;
+    //   this.liste = data;
 
-    })
+    // })
     this.service.getListe().subscribe(data=>{
        this.listes=data;
-    });*/
+    });
 
 
-  
+
     this.services.postulantTrier().subscribe(data=>{
       this.postulistes = data;
     })

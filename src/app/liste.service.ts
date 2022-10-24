@@ -42,13 +42,15 @@ export class ListeService {
   //Afficher une seule liste
 
   getUneListe(idliste: number):Observable<any>{
-    return this.http.get(`http://localhost:8080/liste/${idliste}`);
+    return this.http.get<any>(`http://localhost:8080/liste/${idliste}`);
   }
 
-  //Afficher detail du tirage
-  getUnTirage(idtirage: number):Observable<any>{
-    return this.http.get<any>(`http://localhost:8080/tirage/${idtirage}`);
+  //Afficher detail dun tirage
+  getUnTirage(id: number):Observable<any>{
+    return this.http.get<Tirage>(`http://localhost:8080/tirage/${id}`);
   }
+
+
 
   //Afficher le nombre de personne sur une liste
   getNbPersonne(idliste: number):Observable<any>{

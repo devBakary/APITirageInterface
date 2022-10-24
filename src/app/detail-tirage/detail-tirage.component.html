@@ -1,62 +1,45 @@
-<section class="container">
+<div class="container">
+  <div class="row">
+    <!-- <div class="col"> -->
+      <div class=" col-md-12 col-lg-12 text-center hh">  Detail tirage  </div><br><br>
 
-  <div class="main">
-    <h1>Details Tirage</h1>
-<!--input type="search" /-->
+              <div class="col col-md-4 text-center circle">
+                    <span> {{Untirage.libelle}} </span>
+              </div>
+              <div class="col col-md-4 text-center circle">
+                  <span>{{Untirage.date}} </span>
+              </div>
+              <div class="col col-md-4 text-center circle">
+                <span>{{nbTrier}} </span>
+               </div> <br><br>
 
-    <table>
-      <tr >
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Numero</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Email</th>
 
-        <th>Libelle</th>
-        <th>date</th>
-        <th>Nombre Tiré</th>
-        <th>Liste tirer</th>
-      </tr>
+          </tr>
+        </thead>
 
-      <tr>
-        <td>{{tirage.libelle}}</td>
-        <td>{{tirage.date}}</td>
-        <td>{{nbTrier}}</td>
-        <td></td>
-
-      </tr>
-
-    </table><br>
-
-
-    <!--Verifie que l'observable contient quelquechose-->
-
-    <table>
-      <tr >
-        <th>n°</th>
-        <th>Nom</th>
-        <th>Prénom</th>
-        <th>Numéro</th>
-        <th>Email</th>
-      </tr>
-
-      <!-- <tr *ngFor="let t of postulantListe$ |filter:serachText | paginate: {itemsPerPage: 1,currentPage: pages} |async; index as g"></tr> -->
-   <tr *ngFor="let t of postulantListe$ let id=index">
-    <!--|async; index as g -->
-
-        <td>{{id+1}}</td>
-        <td>{{t.nompostulant}}</td>
-        <td>{{t.prenompostulant}}</td>
-        <td>{{t.numeropostulant}}</td>
-        <td>{{t.email}}</td>
-      </tr>
-
-    </table>
+        <tbody>
+          <tr  *ngFor="let tirage of postulantListe$ |paginate: { itemsPerPage: 5, currentPage: pages};  let id=index" >
+            <th scope="row">{{id+1}}</th>
+            <td>{{tirage.nompostulant}}</td>
+            <td>{{tirage.prenompostulant}}</td>
+            <td>{{tirage.numeropostulant}}</td>
+            <td>{{tirage.email}}</td>
+          </tr>
+        </tbody>
+      </table>
 
 
-    <button>
-      <a href="#">Retour</a>
-      <i class="fa-solid fa-angles-right"></i>
 
-    </button>
+      <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+  </div>
 
 
- </div>
- <!-- <pagination-controls (pageChange)="pages = $event"></pagination-controls> -->
-
-</section>
+<!-- </div> -->

@@ -1,6 +1,72 @@
-<section class="container">
+<div class="container">
   <div class="main">
+    <div class="row">
 
+      <div class="col-12 col-md-7 mb-4">
+        <form name="form">
+          <div class="forme">
+            <div class="col mb-4 bg-success text-center" *ngIf="msg">
+              {{msg}}
+            </div>
+
+             <!-- Email input -->
+            <div class="form-floating mb-4">
+              <input type="text" name="libelle" id="floatingInput" class="form-control" [(ngModel)]="libelle" />
+              <label for="floatingInput">Libelle</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input type="text" name="libele" id="floatingInput" class="form-control" [(ngModel)]="libele" />
+              <label class="" for="floatingInput">Liste</label>
+            </div>
+
+            <div class="form-floating mb-4">
+              <input type="number" name="nbre" id="floatingInput" class="form-control" minlength="1" maxlength="3" [(ngModel)]="nbre" />
+              <label for="floatingInput">Nombre à tiré</label>
+            </div>
+
+            <button class="btn btn-success bttn" (click)="faireTirage()" type="submit">Tirer</button>
+
+          </div>
+        </form>
+
+      </div>
+
+
+
+
+      <div class="col col-md-5">
+
+        <div class="part2" >
+          <div class="formm">
+          <h2 style="margin-left: 0%;">Importer un fichier excel ici!</h2>
+
+          <img class=" text-center fil" src="assets/images/file.png" alt="">
+
+          <form name="form" [formGroup]="formmodule" (ngSubmit)="importerliste()">
+
+            <div class="form-floating group mb-4">
+              <input type="file" name="file" id="floatingInput" class="form-control" formControlName="file"  (change)="fileChange($event)" >
+            </div>
+
+            <div class="form-floating group mb-4">
+              <input class= "file" type="text" name="libele" id="floatingInput" class="form-control" formControlName="libele">
+              <label for="floatingInput">Libelle de la liste*</label>
+            </div>
+
+            <button class=" btn btn-success bttn" type="submit">Enregistrer</button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <section>
+  <div>
   <div class="part1">
     <div class="entete">
       <table>
@@ -9,50 +75,15 @@
           <img class="imge" src="assets/images/detailTirage.jpg" alt="">
         </tr>
       </table>
-      
-      
+
+
     </div>
-    <form name="form">
-      <div class="forme">
-        <table>
-          <tr>
-            <td><label for="libelle">Libelle</label></td>
-            <td ><input class="libelle" type="text" name="libelle"  placeholder="Veuillez entre le libelle du tirage!" [(ngModel)]="libelle"  ></td>
-          </tr>
-          <tr>
-            <td><label for="liste">Liste</label></td>
-            <td><input class="libelle" type="text" placeholder="Donner le libelle de la liste du tirage" name="libele" [(ngModel)]="libele">
-             </td>
-          </tr>
-          <tr>
-            <td><label for="nombre">Nombre à tiré</label></td>
-            <td><input  class="nbre" type="number" name="nbre" placeholder="0" minlength="1" maxlength="3" required [(ngModel)]="nbre"  ></td>
-          </tr>
-        </table>
-    </div><br><br>
-          <button class="btn" (click)="faireTirage()" type="submit">Tirer</button>
-
-    </form>
-  </div>
-
-
-  <div class="part2" >
-    <div class="formm">
-    <h2 style="margin-left: 0%;">Importer un fichier excel ici</h2>
-
-    <img class="fil" src="assets/images/file.png" alt="">
-
-    <form name="form" [formGroup]="formmodule" (ngSubmit)="importerliste()">
-      <div class="group">
-      <input type="file" name="file" formControlName="file"  (change)="fileChange($event)" >
-
-    </div><br><br>
-      <input class="file" type="text" placeholder="Donner le libelle de la liste" name="libele" formControlName="libele"><br><br>
-      <button class="bttn" type="submit">Enregistrer</button>
-    </form>
 
   </div>
+
+
+
 </div>
 </div>
-</section>
+</section> -->
 

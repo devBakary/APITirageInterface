@@ -30,6 +30,7 @@ export class TirageComponent implements OnInit {
   libele:string=''
   date!:Date;
   nbre:number=0;
+  msg: any;
 
   //pour afficher la liste
   listes: any
@@ -48,7 +49,7 @@ export class TirageComponent implements OnInit {
       libele: ['', Validators.required],
       file:['', Validators.required]
     })
-   
+
   }
   fileChange(e:any){
     this.file = e.target["files"][0]
@@ -68,13 +69,14 @@ export class TirageComponent implements OnInit {
     this.nbre=0
   }
 
-
+//methode pour faire le tirage!
   faireTirage(){
     // this.tirage= this.formmodules.value
     this.tiraObj.libelle=this.libelle;
     this.service.tirage(this.tiraObj, this.libele, this.nbre ).subscribe(
       data=>{
         this.resetForm()
+        this.msg = "tirage effectué avec succes!"
       }
     )
   }

@@ -1,13 +1,7 @@
 
-
-.stat{
-  display: flex;
-}
-
-
 /* le deux container contenant les statistiques*/
 .stat1{
-  margin-left: 7%;
+  // margin-left: 7%;
   width: 90%;
   height: 270px;
   background-color: #ececec;
@@ -17,332 +11,325 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 
-/*libelle pour le premeier statistique*/
+// /*libelle pour le premeier statistique*/
 .part1{
-  margin-left: 2%;
   font-weight: bold;
   font-size: 22px;
 }
-/*libelle pour le deuxieme statistique*/
-.part2{
-  padding-top: 15px;
-  margin-left: 17%;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-/*libelle pour le troisieme statistique*/
-.part3{
-  padding-top: 15px;
-  margin-left: 21%;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.cercle{
-  display: flex;
-}
-/* premier stat*/
 .cercle1{
-  margin-left: 7%;
-  margin-top: 5%;
-  width: 100px;
-  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
-  text-align: center;
   border: 12px solid #17375e;
 }
+
+.stat{
+  width: 90%;
+  height: auto;
+  background-color: #ececec;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
 //statistique pour le premier cercle
 .statistic{
   text-align: center;
   font-size: 60px;
-  position: absolute;
-  top: 21%;
-  left: 29%;
+  // position: absolute;
+  // top: 21%;
+  // left: 29%;
   // margin-bottom: -100px;
 }
 
 
-.cercle2{
-  margin-left: 23%;
-  margin-top: 5%;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  border: 12px solid #17375e;
-}
+// .cercle2{
+//   margin-left: 23%;
+//   margin-top: 5%;
+//   text-align: center;
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 100%;
+//   border: 12px solid #17375e;
+// }
 
-//statistique pour le deuxieme cercle
-.statistic2{
-  text-align: center;
-  font-size: 60px;
-  position: absolute;
-  top: 21%;
-  left: 54.5%;
-}
+// //statistique pour le deuxieme cercle
+// .statistic2{
+//   text-align: center;
+//   font-size: 60px;
+//   position: absolute;
+//   top: 21%;
+//   left: 54.5%;
+// }
 
-/* premier stat*/
-.cercle3{
-  margin-left: 22%;
-  margin-top: 5%;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  text-align: center;
-  border: 12px solid #17375e;
-}
+// /* premier stat*/
+// .cercle3{
+//   margin-left: 22%;
+//   margin-top: 5%;
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 100%;
+//   text-align: center;
+//   border: 12px solid #17375e;
+// }
 
-//statistique pour le troisieme cercle
-.statistic3{
-  text-align: center;
-  font-size: 60px;
-  position: absolute;
-  top: 21%;
-  left: 79.5%;
-}
+// //statistique pour le troisieme cercle
+// .statistic3{
+//   text-align: center;
+//   font-size: 60px;
+//   position: absolute;
+//   top: 21%;
+//   left: 79.5%;
+// }
 
-/* Bouton tirage*/
-.tirage{
- border: 1px solid black;
-  background-color: #17375e;
-  width: 250px;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border-radius: 10%;
-  margin-top: 10%;
-}
-.tirage a{
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-  font-weight: bolder;
-}
+// /* Bouton tirage*/
+// .tirage{
+//  border: 1px solid black;
+//   background-color: #17375e;
+//   width: 250px;
+//   height: 40px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   text-align: center;
+//   border-radius: 10%;
+//   margin-top: 10%;
+// }
+// .tirage a{
+//   padding: 10px;
+//   text-decoration: none;
+//   color: black;
+//   font-size: 30px;
+//   font-weight: bolder;
+// }
 
-.foot{
-  display: flex;
-  margin-left: 2%;
-}
-.reseau{
-  width: 50%;
-}
-.reseau img{
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-}
-/*.address{
+// .foot{
+//   display: flex;
+//   margin-left: 2%;
+// }
+// .reseau{
+//   width: 50%;
+// }
+// .reseau img{
+//   width: 50px;
+//   height: 50px;
+//   padding: 10px;
+// }
+// /*.address{
 
-}*/
-.address img{
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-}
+// }*/
+// .address img{
+//   width: 30px;
+//   height: 30px;
+//   padding: 5px;
+// }
 
-@media(max-width: 600px){
+// @media(max-width: 600px){
 
-  .cercle{
-    display: block;
-  }
+//   .cercle{
+//     display: block;
+//   }
 
-  .stat1{
-    width: 90%;
-    height: 100%;
-    padding: 15px;
-  }
+//   .stat1{
+//     width: 90%;
+//     height: 100%;
+//     padding: 15px;
+//   }
 
-  .cercle1, .cercle2, .cercle3{
-    margin-left: auto;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 12px solid green;
-    margin-right: auto;
-    margin-bottom: 60px;
-  }
-  .part1{
-    position: absolute;
-    top: 13%;
-    right: 17%;
-  }
-  /*libelle pour le deuxieme statistique*/
-  .part2{
-    position: absolute;
-    top: 43%;
-    right: 19%;
-  }
+//   .cercle1, .cercle2, .cercle3{
+//     margin-left: auto;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 100%;
+//     border: 12px solid green;
+//     margin-right: auto;
+//     margin-bottom: 60px;
+//   }
+//   .part1{
+//     position: absolute;
+//     top: 13%;
+//     right: 17%;
+//   }
+//   /*libelle pour le deuxieme statistique*/
+//   .part2{
+//     position: absolute;
+//     top: 43%;
+//     right: 19%;
+//   }
 
-  /*libelle pour le troisieme statistique*/
-  .part3{
-    position: absolute;
-    top: 74%;
-    right: 21%;
-  }
+//   /*libelle pour le troisieme statistique*/
+//   .part3{
+//     position: absolute;
+//     top: 74%;
+//     right: 21%;
+//   }
 
-}
+// }
 
-@media(min-width: 600px) and (max-width: 740px){
+// @media(min-width: 600px) and (max-width: 740px){
 
-  .cercle{
-    display: flex;
-  }
+//   .cercle{
+//     display: flex;
+//   }
 
-  .stat1{
-    width: 90%;
-    height: 435px;
-    padding: 15px;
-  }
+//   .stat1{
+//     width: 90%;
+//     height: 435px;
+//     padding: 15px;
+//   }
 
-  .cercle1, .cercle2{
-    margin-left: auto;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 12px solid green;
-    margin-right: auto;
-    margin-bottom: 60px;
-  }
+//   .cercle1, .cercle2{
+//     margin-left: auto;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 100%;
+//     border: 12px solid green;
+//     margin-right: auto;
+//     margin-bottom: 60px;
+//   }
 
-.cercle3{
-    margin-left: auto;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 12px solid green;
-    margin-right: auto;
-    position: absolute;
-    top: 45%;
-    left: 36%;
-}
-  .part1{
-    position: absolute;
-    top: 13%;
-    right: 38%;
-  }
-  /*libelle pour le deuxieme statistique*/
-  .part2{
-    position: absolute;
-    top: 11%;
-    right: 8%;
-  }
+// .cercle3{
+//     margin-left: auto;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 100%;
+//     border: 12px solid green;
+//     margin-right: auto;
+//     position: absolute;
+//     top: 45%;
+//     left: 36%;
+// }
+//   .part1{
+//     position: absolute;
+//     top: 13%;
+//     right: 38%;
+//   }
+//   /*libelle pour le deuxieme statistique*/
+//   .part2{
+//     position: absolute;
+//     top: 11%;
+//     right: 8%;
+//   }
 
-  /*libelle pour le troisieme statistique*/
-  .part3{
-    position: absolute;
-    top: 43%;
-    right: 40%;
-  }
+//   /*libelle pour le troisieme statistique*/
+//   .part3{
+//     position: absolute;
+//     top: 43%;
+//     right: 40%;
+//   }
 
-}
+// }
 
-@media(min-width: 740px) and (max-width: 920px){
+// @media(min-width: 740px) and (max-width: 920px){
 
-  .cercle{
-    display: flex;
-  }
+//   .cercle{
+//     display: flex;
+//   }
 
-  .stat1{
-    width: 90%;
-    height: 435px;
-    padding: 15px;
-  }
+//   .stat1{
+//     width: 90%;
+//     height: 435px;
+//     padding: 15px;
+//   }
 
-  .cercle1, .cercle2{
-    margin-left: auto;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 12px solid green;
-    margin-right: auto;
-    margin-bottom: 60px;
-  }
+//   .cercle1, .cercle2{
+//     margin-left: auto;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 100%;
+//     border: 12px solid green;
+//     margin-right: auto;
+//     margin-bottom: 60px;
+//   }
 
-.cercle3{
-    margin-left: auto;
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 12px solid green;
-    margin-right: auto;
-    position: absolute;
-    top: 45%;
-    left: 36%;
-}
-  .part1{
-    position: absolute;
-    top: 14%;
-    right: 41%;
-  }
-  /*libelle pour le deuxieme statistique*/
-  .part2{
-    position: absolute;
-    top: 12%;
-    right: 11%;
-  }
+// .cercle3{
+//     margin-left: auto;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 100%;
+//     border: 12px solid green;
+//     margin-right: auto;
+//     position: absolute;
+//     top: 45%;
+//     left: 36%;
+// }
+//   .part1{
+//     position: absolute;
+//     top: 14%;
+//     right: 41%;
+//   }
+//   /*libelle pour le deuxieme statistique*/
+//   .part2{
+//     position: absolute;
+//     top: 12%;
+//     right: 11%;
+//   }
 
-  /*libelle pour le troisieme statistique*/
-  .part3{
-    position: absolute;
-    top: 45%;
-    right: 44%;
-  }
+//   /*libelle pour le troisieme statistique*/
+//   .part3{
+//     position: absolute;
+//     top: 45%;
+//     right: 44%;
+//   }
 
-}
+// }
 
-@media(min-width: 920px) and (max-width: 1164px){
+// @media(min-width: 920px) and (max-width: 1164px){
 
-  .stat1{
-    margin-left: 7%;
-    width: 90%;
-    height: 270px;
-    background-color: #ececec;
-    border-radius: 8px 8px 0 0;
-    box-sizing: border-box;
-    padding: 10px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
-  }
+//   .stat1{
+//     margin-left: 7%;
+//     width: 90%;
+//     height: 270px;
+//     background-color: #ececec;
+//     border-radius: 8px 8px 0 0;
+//     box-sizing: border-box;
+//     padding: 10px;
+//     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+//   }
 
-  /*libelle pour le premeier statistique*/
-  .part1{
-    font-weight: bold;
-    font-size: 22px;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-  }
-  /*libelle pour le deuxieme statistique*/
-  .part2{
-    position: absolute;
-    right: 10%;
-    top: 17%;
-  }
+//   /*libelle pour le premeier statistique*/
+//   .part1{
+//     font-weight: bold;
+//     font-size: 22px;
+//     position: absolute;
+//     top: 20%;
+//     left: 20%;
+//   }
+//   /*libelle pour le deuxieme statistique*/
+//   .part2{
+//     position: absolute;
+//     right: 10%;
+//     top: 17%;
+//   }
 
-  /*libelle pour le troisieme statistique*/
-  .part3{
-    position: absolute;
-    right: 11%;
-    top: 13%;
-  }
+//   /*libelle pour le troisieme statistique*/
+//   .part3{
+//     position: absolute;
+//     right: 11%;
+//     top: 13%;
+//   }
 
-  .cercle{
-    display: flex;
-  }
-  /* premier stat*/
-  .cercle1{
-    margin-left: 3%;
-    margin-top: 5%;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    text-align: center;
-    border: 12px solid green;
-  }
+//   .cercle{
+//     display: flex;
+//   }
+//   /* premier stat*/
+//   .cercle1{
+//     margin-left: 3%;
+//     margin-top: 5%;
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 100%;
+//     text-align: center;
+//     border: 12px solid green;
+//   }
 
-}
+// }
 
 
 

@@ -8,6 +8,9 @@ import { OnInit } from "@angular/core";
   styleUrls: ['./app.component.scss'],
   providers:[ListeService]
 })
+
+
+
 export class AppComponent implements OnInit {
   title = 'APITirageInterface';
   liste : Object

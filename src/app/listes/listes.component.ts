@@ -16,6 +16,7 @@ export class ListesComponent implements OnInit {
   listes: any;
   url:string = '/tirageL';
   det: any
+  pages: number;
 
   constructor(private service: ListeService) { }
 

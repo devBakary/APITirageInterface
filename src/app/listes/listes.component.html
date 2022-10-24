@@ -1,20 +1,23 @@
 
-<div class="tb">
-  <table class="table">
+<div class="container">
 
-    <th>Id Liste</th>
-    <th>Date</th>
-    <th>Libelle</th>
-    <th>Details</th>
-
-    <tr *ngFor="let liste of listes">
-
-      <td>{{liste.idliste}}</td>
-      <td>{{liste.date}}</td>
-      <td>{{liste.libele}}</td>
-      <td  style="text-align: right;"><a [routerLink] ="[url, liste.idliste]"><i class="fa fa-external-link" aria-hidden="true"></i></a></td>
-    </tr>
-
-  </table>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="row">Date</th>
+            <th scope="col">Libellé</th>
+            <th scope="col" style="text-align: center;">Détails</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let liste of listes | paginate: { itemsPerPage: 4, currentPage: pages};">
+            <td>{{liste.date}}</td>
+            <td>{{liste.libele}}</td>
+            <td  style="text-align: center;"><a [routerLink] ="[url, liste.idliste]"><i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="pages = $event"></pagination-controls>
 
 </div>
+
